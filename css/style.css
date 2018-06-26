@@ -1,7 +1,13 @@
-.tomagotchi {
+.character img {
+	height: 150px;
+	width: 150px;
+	padding-left: 160px;
+}
+
+.container-fluid {
 	border: 2px solid black;
-	height: 320px;
-	width: 480px;
+	/*height: 320px;
+	width: 480px;*/
 	background-color: pink;
 }
 .interact {
@@ -15,11 +21,7 @@
 	background-color: yellow;
 	border: 2px solid black;
 }
-.character img {
-	height: 150px;
-	width: 150px;
-	padding-left: 160px;
-}
+
 .metrics h3 {
 	display: inline-block;
 	}
