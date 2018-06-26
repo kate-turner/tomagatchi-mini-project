@@ -2,7 +2,7 @@
 class Tomagatchi {
 	constructor(name){
 		this.name = name;
-		this.hunger = 0;
+		this.hunger = 0
 		this.sleepiness = 0;
 		this.boredom = 0;
 		this.age = 0;
@@ -66,11 +66,25 @@ const displayStats = () => {
 	$("span#sleepiness").text(meme.sleepiness);
 	$("span#boredom").text(meme.boredom);
 	$("span#age").text(meme.age);
-
-
 }
 
+$("#food-button").on ('click', () => {
+	meme.eat();
+	$("span#hunger").text(meme.hunger);
+	console.log("thank you for feeding me!");
+});
 
+$("#sleep-button").on ('click', () => {
+	meme.sleep();
+	$("span#sleepiness").text(meme.sleepiness);
+	console.log("thank you for turning off the light!");
+});
+
+$("#play-button").on ('click', () => {
+	meme.play();
+	$("span#boredom").text(meme.boredom);
+	console.log("thank you for playing with me!");
+});
 
 
 
