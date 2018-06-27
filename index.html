@@ -4,13 +4,16 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>tomagotchi</title>
 </head>
 <body>
 
 
-<div class="container-fluid">
+<div class="container">
+	<!-- <div clas="circle"> -->
+
 	
 	<div class="row interactive">
 	<div class="col-sm-4"
@@ -23,11 +26,11 @@
 		<button type="button" id="play-button">Play</button>
 	</div>
 	</div>
-	</div>
+	
 	
 	<div class="row character">
 
-		<img src="Memetchi_.png" class="animate"alt="Memetchi">
+		<img src="Memetchi_.png" class="animate" id="unicorn"alt="Memetchi">
 	</div>
 	
 	
@@ -39,16 +42,20 @@
 	
 	<div class="row metrics">
 		<div class="col-sm-5">
-		<h3><span id="hunger">Hunger: 0</span></h3>
+		<p>Hunger</p>
+		<p><span id="hunger">0</span></p>
 		</div>
 		<div class="col-sm-5">
-		<h3><span id="sleepiness">Sleepiness: 0</span></h3>
+		<p>Sleepiness</p>
+		<p><span id="sleepiness">0</span></p>
 		</div>
 		<div class="col-sm-5">
-		<h3><span id="boredom">Boredom: 0</span></h3>
+		<p>Boredom</p>
+		<p><span id="boredom">0</span></p>
 		</div>
 		<div class="col-sm-5">
-		<h3><span id="age">Age: 0</span></h3>
+		<p>Age</p>
+		<p><span id="age">0</span></p>
 		</div>
 	</div>
 

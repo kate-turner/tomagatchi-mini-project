@@ -29,8 +29,19 @@ class Tomagatchi {
 
 let meme = new Tomagatchi("Meme");
 
+function moveRight() {
+	$(".animate").animate({left: "+=50"}, 2000, function() {
+		moveLeft();
+	});
+}
 
+function moveLeft(){
+	$(".animate").animate({left: "-=50"}, 2000, function () {
+		setTimeout(moveRight, 50);
+	});
+}
 
+setTimeout(moveRight, 50);
 
 
 $('#submit').on('click', () => {
@@ -38,8 +49,10 @@ $('#submit').on('click', () => {
 	console.log('click')
 	console.log($('#character').val());
 	const name = ($('#character').val());
-	$('body').append(`Your name is ${name}`);
-	$(".animate").animate({left: '100px'});
+	$(".name").hide();
+
+	$('.character').append(`Your name is ${name}`);
+	
 
 
 
@@ -55,13 +68,16 @@ const timePassing = () => {
 	console.log(`boredom: ${meme.boredom}`)
 	meme.sleepiness++;
 	console.log(`sleepiness: ${meme.sleepiness}`)
-	if(meme.hunger > 9 || meme.boredom > 9 || meme.sleepiness > 9){
-		console.log("funeral")
+	if(meme.hunger > 9 || meme.boredom > 9 || meme.sleepiness > 9 || meme.age > 9){
+		alert(`${name} has passed on to the next life. Blessed be the fruit!`);
+		$(".animate").attr("src", "puke-rainbows-gif-10.gif").css("height", 400).css("width", 400).css("background-color", "white");
+		$(".name").hide();
+
 		clearInterval(timePasses);
 	}
 	displayStats();
 };
-const timePasses = setInterval(timePassing, 7000);
+const timePasses = setInterval(timePassing, 1000);
 });
 
 
@@ -90,6 +106,9 @@ $("#play-button").on ('click', () => {
 	$("span#boredom").text(meme.boredom);
 	console.log("thank you for playing with me!");
 });
+
+
+
 
 
 
