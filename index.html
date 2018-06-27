@@ -12,33 +12,49 @@
 
 <div class="container-fluid">
 	
-	<div class="interact">
+	<div class="row interactive">
+	<div class="col-sm-4"
 		<button type="button" id="food-button">Feed Pet</button>
+	</div>
+	<div class="col-sm-4"
 		<button type="button" id="sleep-button">Turn off light</button>
+	</div>
+	<div class="col-sm-4"
 		<button type="button" id="play-button">Play</button>
 	</div>
-	
-	<div class="character">
-		<img src="Memetchi_.png" alt="Memetchi">
+	</div>
 	</div>
 	
-	
+	<div class="row character">
 
-	<div class="name">
-		<button type="button" class="btn btn-success"" id="start-button"Start</button>
-		<input type="text" id="character" placeholder="Enter character name">
-		<input type ="submit" id="submit"
+		<img src="Memetchi_.png" class="animate"alt="Memetchi">
 	</div>
 	
-	<div class="metrics">
-		<h3><span id="hunger">Hunger: 0</span></h3>
-		<h3><span id="sleepiness">Sleepiness: 0</span></h3>
-		<h3><span id="boredom">Boredom: 0</span></h3>
-		<h3><span id="age">Age: 0</span></h>
+	
+	<div class="row name">
+		<button type="button" class="btn btn-success"" id="start-button"Start>
+		<input type="text" id="character" placeholder="Enter character name">
+		<input type ="submit" id="submit">
 	</div>
+	
+	<div class="row metrics">
+		<div class="col-sm-5">
+		<h3><span id="hunger">Hunger: 0</span></h3>
+		</div>
+		<div class="col-sm-5">
+		<h3><span id="sleepiness">Sleepiness: 0</span></h3>
+		</div>
+		<div class="col-sm-5">
+		<h3><span id="boredom">Boredom: 0</span></h3>
+		</div>
+		<div class="col-sm-5">
+		<h3><span id="age">Age: 0</span></h3>
+		</div>
+	</div>
+
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="js/app.js"type="text/javascript"></script>

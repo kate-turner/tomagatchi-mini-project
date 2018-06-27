@@ -29,23 +29,26 @@ class Tomagatchi {
 
 let meme = new Tomagatchi("Meme");
 
-const ageUp = () => {
-	meme.age++;
-	console.log(`age: ${meme.age}`);
-	if(meme.age > 9) {
-		console.log("Your Tomagatchi has died of old age. Blessed be the fruit");
-		clearInterval(aging);
-	}
-	displayStats();
-};
-const aging = setInterval(ageUp, 10000);
+
+
+
+
+$('#submit').on('click', () => {
+
+	console.log('click')
+	console.log($('#character').val());
+	const name = ($('#character').val());
+	$('body').append(`Your name is ${name}`);
+	$(".animate").animate({left: '100px'});
 
 
 
 let seconds = 0; 
 const timePassing = () => {
 	seconds++;
-	console.log(`It has been ${seconds} seconds`)
+	if(seconds % 3 == 0){
+		meme.age++;
+	}
 	meme.hunger++;
 	console.log(`hunger: ${meme.hunger}`)
 	meme.boredom++;
@@ -59,6 +62,8 @@ const timePassing = () => {
 	displayStats();
 };
 const timePasses = setInterval(timePassing, 7000);
+});
+
 
 
 const displayStats = () => {
@@ -91,12 +96,7 @@ $("#play-button").on ('click', () => {
 
 
 // Clear name after, append to character div in fun text/ change box to green
-$('#submit').on('click', () => {
-	console.log('click')
-	console.log($('#character').val());
-	const name = ($('#character').val());
-	$('body').append(`Your name is ${name}`);
-});
+
 
 
 
