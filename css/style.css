@@ -25,6 +25,7 @@
 
 .interactive {
 	height: 80px;
+	text-align: center;
 	}
 
 .mangoicon {
@@ -57,5 +58,23 @@
 	font-size: 20px;
 	}
 
+.fatunicorn {
+	opacity: 0;
+	height: 0px;
+	width: 0px;
+	justify-content: center;
+	margin-top: 5px;
+}
 
+#food-button {
+	background-color: pink;
+}
+
+#sleep-button {
+	background-color: pink;
+}
+
+#play-button {
+	background-color: pink;
+}
 

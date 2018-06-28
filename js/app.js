@@ -71,7 +71,9 @@ const timePassing = () => {
 	console.log(`sleepiness: ${meme.sleepiness}`)
 	if(meme.hunger > 9 || meme.boredom > 9 || meme.sleepiness > 9 || meme.age > 9){
 		alert(`GAME OVER! ${name} is star-crossed and done for.`);
-		$(".animate").stop(moveRight());
+		$(".animate").hide();
+		$(".fatunicorn").css("opacity", 1).css("height", 340).css("width", 340);
+		// $(".animate").attr()
 		 // $('#GameOver').fadeIn();
 
 		// attr("src", "lost.png");
@@ -118,9 +120,6 @@ $("#play-button").on ('click', () => {
 
 
 
-
-
-// Clear name after, append to character div in fun text/ change box to green
 
 
 
