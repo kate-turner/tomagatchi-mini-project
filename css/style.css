@@ -24,7 +24,7 @@
 }
 
 .interactive {
-	height: 80px;
+	/*height: 80px;*/
 	text-align: center;
 	}
 
@@ -46,7 +46,8 @@
 }
 
 .character {
-	align-items: stretch;
+	text-align: center;
+	/*align-items: stretch;*/
 	background-color: yellow;
 	border: 2px solid black;
 	}
@@ -58,7 +59,7 @@
 	font-size: 20px;
 	}
 
-.fatunicorn {
+.pukingrainbow {
 	opacity: 0;
 	height: 0px;
 	width: 0px;
@@ -68,13 +69,20 @@
 
 #food-button {
 	background-color: pink;
+	outline: none;
 }
 
 #sleep-button {
 	background-color: pink;
+	outline: none;
 }
 
 #play-button {
 	background-color: pink;
+	outline: none;
+}
+
+body {
+	background-color: rgb(242, 204, 255);
 }
 

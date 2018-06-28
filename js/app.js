@@ -70,16 +70,13 @@ const timePassing = () => {
 	meme.sleepiness++;
 	console.log(`sleepiness: ${meme.sleepiness}`)
 	if(meme.hunger > 9 || meme.boredom > 9 || meme.sleepiness > 9 || meme.age > 9){
-		alert(`GAME OVER! ${name} is star-crossed and done for.`);
 		$(".animate").hide();
-		$(".fatunicorn").css("opacity", 1).css("height", 340).css("width", 340);
-		// $(".animate").attr()
-		 // $('#GameOver').fadeIn();
-
-		// attr("src", "lost.png");
-	
+		$(".pukingrainbow").css("opacity", 1).css("height", "340").css("width", "340");
+		$(".character").css("background-color", "white");
 		
-		clearInterval(timePasses);
+		$(".character").prepend('<h1>Game Over</h1>').css("justify-content", "center");
+		
+	clearInterval(timePasses);
 	}
 	displayStats();
 };
@@ -99,7 +96,6 @@ $("#food-button").on ('click', () => {
 	meme.eat();
 	$("span#hunger").text(meme.hunger);
 	console.log("thank you for feeding me!");
-	
 });
 
 $("#sleep-button").on ('click', () => {
