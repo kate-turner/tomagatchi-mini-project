@@ -48,8 +48,8 @@
 	align-items: stretch;
 	background-color: yellow;
 	border: 2px solid black;
-	
-}
+	}
+
 
 .metrics p  {
 	margin: 10px;
@@ -57,10 +57,5 @@
 	font-size: 20px;
 	}
 
-
-
-.name #character {
-	font-family: 'Monoton', cursive;
-}
 
 

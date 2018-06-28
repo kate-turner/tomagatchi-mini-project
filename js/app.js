@@ -29,6 +29,8 @@ class Tomagatchi {
 
 let meme = new Tomagatchi("Meme");
 
+$('#GameOver').hide();
+
 function moveRight() {
 	$(".animate").animate({left: "+=50"}, 2000, function() {
 		moveLeft();
@@ -45,13 +47,12 @@ setTimeout(moveRight, 50);
 
 
 $('#submit').on('click', () => {
-
-	console.log('click')
-	console.log($('#character').val());
+	// alert(`Game Begins: Enter character name`);
+	// console.log('click')
+	// console.log($('#character').val());
 	const name = ($('#character').val());
 	$(".name").hide();
 
-	// $('.character').append(`Your name is ${name}`);
 	
 
 
@@ -69,10 +70,13 @@ const timePassing = () => {
 	meme.sleepiness++;
 	console.log(`sleepiness: ${meme.sleepiness}`)
 	if(meme.hunger > 9 || meme.boredom > 9 || meme.sleepiness > 9 || meme.age > 9){
-		alert(`Oh NO! ${name} is star-crossed and done for.`);
+		alert(`GAME OVER! ${name} is star-crossed and done for.`);
 		$(".animate").stop(moveRight());
+		 // $('#GameOver').fadeIn();
+
 		// attr("src", "lost.png");
 	
+		
 		clearInterval(timePasses);
 	}
 	displayStats();
@@ -93,6 +97,7 @@ $("#food-button").on ('click', () => {
 	meme.eat();
 	$("span#hunger").text(meme.hunger);
 	console.log("thank you for feeding me!");
+	
 });
 
 $("#sleep-button").on ('click', () => {
@@ -107,7 +112,8 @@ $("#play-button").on ('click', () => {
 	console.log("thank you for playing with me!");
 });
 
-
+ 
+ 
 
 
 
