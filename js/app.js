@@ -32,13 +32,13 @@ let meme = new Tomagatchi("Meme");
 $('#GameOver').hide();
 
 function moveRight() {
-	$(".animate").animate({left: "+=50"}, 2000, function() {
+	$(".animate").animate({left: "+=100"}, 2000, function() {
 		moveLeft();
 	});
 }
 
 function moveLeft(){
-	$(".animate").animate({left: "-=50"}, 2000, function () {
+	$(".animate").animate({left: "-=100"}, 2000, function () {
 		setTimeout(moveRight, 50);
 	});
 }
@@ -47,9 +47,6 @@ setTimeout(moveRight, 50);
 
 
 $('#submit').on('click', () => {
-	// alert(`Game Begins: Enter character name`);
-	// console.log('click')
-	// console.log($('#character').val());
 	const name = ($('#character').val());
 	$(".name").hide();
 
@@ -60,21 +57,24 @@ $('#submit').on('click', () => {
 let seconds = 0; 
 const timePassing = () => {
 	seconds++;
-	if(seconds % 3 == 0){
+	if(seconds % 4 == 0){
 		meme.age++;
 	}
-	meme.hunger++;
-	console.log(`hunger: ${meme.hunger}`)
-	meme.boredom++;
-	console.log(`boredom: ${meme.boredom}`)
-	meme.sleepiness++;
-	console.log(`sleepiness: ${meme.sleepiness}`)
+	if(seconds % 1 == 0){
+		meme.hunger++;
+	}
+	if(seconds % 2 == 0){
+		meme.boredom++;
+	}
+	if(seconds % 3 == 0){
+		meme.sleepiness++;
+	}
 	if(meme.hunger > 9 || meme.boredom > 9 || meme.sleepiness > 9 || meme.age > 9){
 		$(".animate").hide();
 		$(".pukingrainbow").css("opacity", 1).css("height", "340").css("width", "340");
 		$(".character").css("background-color", "white");
 		
-		$(".character").prepend('<h1>Game Over</h1>').css("justify-content", "center");
+		$(".character").prepend('<h1>Game Over</h1>').css("text-align", "center");
 		
 	clearInterval(timePasses);
 	}
