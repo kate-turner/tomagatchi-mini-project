@@ -7,7 +7,7 @@
 	background-color: pink;
 	height: 60%
 	width: 90%;
-	z-index: 1;
+	/*z-index: 1;*/
 	font-family: 'Monoton', cursive;
 }
 
@@ -19,14 +19,25 @@
 
 }
 
-.interact {
-	align-items: stretch;
-	max-width: 100%;
-	display: inline-block;
-	justify-content: space-around;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	
+.interactive {
+	height: 80px;
+	}
+
+.mangoicon {
+	height: 70px;
+	width: 70px;
+	margin-top: 3px;
+}
+
+.powericon {
+	height: 70px;
+	width: 70px;
+	margin-top: 3px;
+}
+.staricon {
+	height: 70px;
+	width: 70px;
+	margin-top: 3px;
 }
 
 .character {
@@ -47,3 +58,5 @@
 .name #character {
 	font-family: 'Monoton', cursive;
 }
+
+
