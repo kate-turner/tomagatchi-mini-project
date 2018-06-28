@@ -51,7 +51,7 @@ $('#submit').on('click', () => {
 	const name = ($('#character').val());
 	$(".name").hide();
 
-	$('.character').append(`Your name is ${name}`);
+	// $('.character').append(`Your name is ${name}`);
 	
 
 
@@ -69,10 +69,10 @@ const timePassing = () => {
 	meme.sleepiness++;
 	console.log(`sleepiness: ${meme.sleepiness}`)
 	if(meme.hunger > 9 || meme.boredom > 9 || meme.sleepiness > 9 || meme.age > 9){
-		alert(`${name} has passed on to the next life. Blessed be the fruit!`);
-		$(".animate").attr("src", "puke-rainbows-gif-10.gif").css("height", 400).css("width", 400).css("background-color", "white");
-		$(".name").hide();
-
+		alert(`Oh NO! ${name} is star-crossed and done for.`);
+		$(".animate").stop(moveRight());
+		// attr("src", "lost.png");
+	
 		clearInterval(timePasses);
 	}
 	displayStats();
